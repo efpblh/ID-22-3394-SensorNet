@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <TextView
+        android:id="@+id/filters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fira_sans_bold"
+        android:text="Фильтры"
+        android:textSize="15dp"
+        android:layout_gravity="center_horizontal"
+        tools:layout_marginTop="5sp" />
+
+    <Button
+        android:id="@+id/model_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Модель датчика"
+        android:layout_gravity="center_horizontal"
+        tools:layout_marginTop="5sp" />
+
+    <Button
+        android:id="@+id/value_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Тип данных"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/date_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Диапазон времени записи"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/position_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Номер позиции датчика"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Найти"
+        android:layout_gravity="center_horizontal" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:attr/listDivider"
+        tools:layout_marginTop="5sp"
+        />
+
+<!--
+    <TableLayout
+        android:id="@+id/main_table"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" >
+
+    </TableLayout>
+-->
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/scroll"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp" >
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/hscroll" >
+
+            <TableLayout
+                android:id="@+id/main_table"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/elem_num_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="-20dp"/>
+
+</LinearLayout>
